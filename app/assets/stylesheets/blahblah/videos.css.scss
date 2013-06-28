@@ -1,0 +1,101 @@
+//**********************
+// AUTHOR:      BEN YACO
+// NOTES:
+
+
+//*****************
+// CONFIGMEGOOD
+// enter anything that should be abstracted out
+
+//*****************
+// INCLUDES
+// include any scss files here
+
+
+//*****************
+// VIDEO INDEX
+// NOTE: This should be pretty well inherited from the base list class
+//.videos
+//  .video
+//  .video-image
+//  .video-title
+//  .video-duration
+//  .video-save
+//  .video-tags
+
+//*****************
+// VIDEO SHOW
+// NOTE: Should inherit base show styles
+// .video-component
+//.video-title
+//.video-published
+//.video-classification
+//.video-duration
+//.video-playlists
+//.video-description
+
+@import "core/helpers";
+
+#videos-list {
+  @include list("videos", 290);
+}
+
+.page-head {
+  height: 400px;
+}
+
+
+
+#videos-list {
+  .video {
+    float: left;
+    width: 290px;
+    img {
+      width: 100% !important;
+      min-width: auto;
+    }
+  } 
+}
+
+.layout-m {
+  #videos-list {
+    .video {
+      width: 278px;
+    }
+  }
+}
+
+#page-show {
+  .videos {
+    li {
+      width: 25%;
+    }
+  }
+}
+
+#video-playlist {
+  height: 120px;
+  li a img {
+    width: 180px !important;
+    max-width: 180px;
+    min-width: auto;
+  }
+}
+
+#videos-list {
+  .videos li {
+    float: left;
+    height: auto;
+    .image {
+      height: auto !important;
+    }
+    .body {
+      display: none;
+    }
+  }
+}
+
+
+
+
+

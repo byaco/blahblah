@@ -1,0 +1,94 @@
+#topic-head {
+  color: #FFF;
+  min-height: 190px;
+  overflow: hidden;
+  .topic-actions-label {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-right: 0px;
+    margin-top: 8px;
+  }
+  .topic-head {
+    overflow: hidden;
+  }
+
+  #topic-posts-new-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    text-align: right;
+
+    ul {
+      list-style: none;
+      float: right;
+      li {
+        float: left;
+        margin-right: 20px;
+        font-size: 16px;
+        border-right: 1px solid rgba(#FFF, 0.2);
+        padding-right: 20px;
+        line-height: 24px;
+      }
+      li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border: none;
+      }
+    }
+
+  }
+  #topic-posts-new-actions {
+    width: 465px;
+    padding: 17px 20px;
+    background-color: rgba(0,0,0,0.3);
+    @include rc(4px);
+    position: absolute;
+    right: 20px;
+    top: 77px;
+    a {
+      color: #FFF;
+    }
+  }
+  #topic-details {
+    width: 450px;
+  }
+  .container {
+    position: relative;
+  }
+  #topic-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 980px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  .topics-about-path {
+    font-family: "ff-din-round-web-pro";
+   display: block;
+  }
+  .topic-head {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0px;
+    // padding-left: 20px;
+    padding-top: 0px;
+  }
+  .topic-title {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1em;
+  }
+}

@@ -1,0 +1,183 @@
+@import "colors";
+
+$fill_color: #FFF;
+// $svg_width: 70;
+$svg_ign_logo: "data:image/svg+xml;utf8,<svg version='1.1' id='svg-ign-logo' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='194.282px' height='75.662px'
+viewBox='0 0 194.282 75.662' enable-background='new 0 0 194.282 75.662'
+xml:space='preserve'>
+<g>
+<path fill='#{$fill_color}' d='M54.488,46.318V30.031l43.683,0.012c4.435,0,8.051,3.593,8.051,8.028v19.356
+c0,9.963-7.964,18.208-18.089,18.215l-27.964,0.021c-20.726,0-37.495-16.729-37.495-37.402c0-20.656,16.871-37.4,37.527-37.4
+h43.297v17.184H60.192c-11.166,0-20.333,9.053-20.333,20.216c0,11.148,9.034,20.206,20.304,20.205h28.889V46.318H54.488z'/>
+</g>
+<path fill='#{$fill_color}' d='M16.995,0.767H0v12.791v54.161c0,4.401,3.597,7.974,7.998,7.974h0.39h8.617V6.3
+C17.004,6.265,16.995,0.767,16.995,0.767z'/>
+<path fill='#{$fill_color}' d='M186.312,0.81h-9.122l0.008,57.716c-0.013,0.172-0.043,0.334-0.134,0.472
+c-0.203,0.344-0.578,0.576-1.009,0.576c-0.364,0-0.688-0.166-1.046-0.637L146.427,8.827C143.25,3.501,137.42,0,130.886,0h-0.307
+c-9.974,0-18.062,8.085-18.062,18.058v49.661c0,4.401,3.584,7.974,7.984,7.974h9.049l-0.006-57.634c0-0.194,0.075-0.377,0.172-0.53
+c0.198-0.354,0.579-0.593,1.013-0.593c0.358,0,0.772,0.13,1.009,0.57l28.755,50.437c3.176,5.323,8.876,8.572,15.408,8.572h0.309
+c9.974,0,18.072-8.087,18.072-18.06V8.787C194.282,4.385,190.715,0.81,186.312,0.81z'/></svg>";
+$header-logo-width: 110;
+
+
+@mixin svg($fill: $black) {
+  // $fill_color: $fill;
+  // $svg_ign_logo: $svg_ign_logo;
+}
+
+#beta-label {
+  color: darken(#FFF, 30%);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+#ign-navigation {
+  float: left;
+}
+
+#header img.user-image {
+  @include rc(50%);
+}
+
+#ui-back {
+  background: transparent url(icons/icon_back.png) no-repeat left center;
+  display: block;
+  width: 22px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-size: 22px;
+  float: left;
+}
+
+
+#header {
+  input.text {
+    background-color: #50525d;
+  }
+}
+
+.path-root {
+  height: 0;
+  padding-bottom: 100%;
+}
+
+
+#user-navigation {
+  right: 0; 
+  top: 0;
+  padding: 0px;
+  float: right;
+  .user-path {
+    img {
+      width: 25px;
+      margin-right: 10px;
+    } 
+  }
+}
+
+#topic-navigation {
+  float: left;
+}
+
+
+
+#header {
+  //  background: transparent url(temp/header.png) no-repeat center top;
+  // position: fixed;
+  // position: absolute;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  padding: 0;
+  float: left;
+  // min-height: 50px;
+
+  .frame {
+    background-color: #131518;
+    // @include bs(0 0 10px, 0.4);
+    // border-bottom: 1px solid #000;
+    // background: $black linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%);
+    // min-height: 50px;
+    float: left;
+    width: 100%;
+  }
+  
+  .body {
+    float: left;
+    width: 100%;
+    padding: 0px 0 0 0;
+
+  }
+  
+
+  #ign-logo {
+    float: left;
+    padding: 0;
+    margin: 0;
+    a {
+      display: block;
+      float: left;
+      padding: 0;
+      margin: 0 20px 0 0;
+      // background: transparent url(logo/ign_logo_sans_d.png) no-repeat top left;
+      // background: transparent url($svg_ign_logo) no-repeat 0 0;
+      // text-indent: -3333px;
+      overflow: hidden;
+      // height: 40px;
+      line-height: 30px;
+      width: $header-logo-width + px;
+      svg {
+        fill: #FFF;
+        width: $header-logo-width + px;
+        height: 40px;
+
+      }
+    }
+
+  }
+}
+
+
+#header {
+  .button {
+    display: none;
+  }
+  #ign-search {
+    input.text {
+      background: black;
+      border: none;
+      padding: 10px;
+      width: 250px;
+      color: #FFF;
+    }
+  }
+}
+
+#header {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+#header {
+  .navigation {
+    margin-right: 15px;
+    li {
+      a {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    li.selected {
+      background-color: $black;
+      a {
+      }
+    }
+  }
+}

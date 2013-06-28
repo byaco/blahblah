@@ -1,0 +1,88 @@
+.video-component {
+  margin-top: 100px;
+  background-color: $black;
+  .video-carousel {
+    height: 100px;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .video-filters {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid lighten(#000, 5%);
+    margin-bottom: 10px;
+    @include bs(3px -3px 3px, 0.2);
+    .actions {
+      float: right;
+      font-size: 12px;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      .label {
+        margin-right: 10px;
+        padding-top: 8px;
+        position: relative;
+        top: 2px;
+        font-size: 11px;
+        color: #B2B2B2;
+      }
+      .button {
+        $border-color: #1E1F20;
+        background-color: #17191A;
+        border: 2px solid $border-color;
+        @include rc(3px);
+        text-transform: uppercase;
+        font-size: 11px;
+        display: inline-block;
+        line-height: 30px;
+        height: 26px;
+        padding: 0px 15px;
+        position: relative;
+        top: 2px;
+        &:hover {
+         border-color: lighten($border-color, 10%);
+        }
+      }
+    }
+
+    $border-height: 3;
+    li {
+      padding: 0;
+      margin: 0;
+      float: left;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: 'Din';
+      border: none;
+      a {
+        line-height: 30px;
+        display: block;
+        font-weight: bold;
+        padding: 4px 10px;
+        border-top: $border-height + px solid transparent;
+        border-right: 1px solid #000;
+        opacity: 0.5;
+        &:hover {
+         background-color: #000;
+         color: #FFF;
+         opacity: 1;
+        }
+      }
+    }
+    .selected a {
+      border: none;
+      border-right: 1px solid #000;
+      border-top: $border-height + px solid $red;
+      opacity: 1;
+    }
+  }
+  div.video {
+    text-align: center;
+  }
+  video {
+    display: inline-block;
+
+    width: 80% !important;
+    width: 100% !important;
+  }
+}

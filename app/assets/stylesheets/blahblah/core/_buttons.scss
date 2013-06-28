@@ -1,0 +1,285 @@
+//**********************************
+// AUTHOR:          BEN YACO
+// DESCRIPTOIN:     The following is the base button styles 
+//
+
+//  ********************
+//  BASE
+//  .button,
+//  .button-action
+//  .button-submit
+//  .button-cancel
+//  .button-delete
+//  .button-add, .button-accept
+//  .button-close
+
+// .button-facebook-connect
+// .button-twitter-connect
+
+//  .button-repost
+//  .button-like
+
+//  ********************
+//  ONE-OFF
+//  Convention: .button + -actionName + -ObjectName
+//  .button-edit-profile
+//  .button-
+
+//  ********************
+//  OVERRIDES/NAME SPACE
+//  .header
+//    .button
+//  .footer
+//      .button
+//  .module, .block
+//    .button
+//  .promo
+//    .button
+
+//$font-size
+//$rounded-corners
+//$font-color
+//$padding:
+//$border-color:
+//$border-color-onHover:
+//$button-background-color:
+//$background-color-onHover:
+
+@mixin button($text-color, $background-color, $border-color, $hover-background-color, $hover-border-color, $hover-text-color)  {
+}
+
+
+@import "core/colors";
+$button-corner-radius: 0;
+
+.action-path {
+  font-size: 13px;
+  color: $grey;
+  font-family: "ff-din-round-web-pro";
+  text-transform: uppercase;
+  svg {
+    width: 15px;
+    height: 15px;
+    &:hover {
+     fill: $grey;
+    }
+  }
+}
+
+button {
+  a, input {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+}
+.button {
+  display: inline-block;
+  float: none;
+}
+
+.button, .button a, .button input {
+  // @include rc(3px);
+  //TODO FIXME make bmb global
+  @include bmb;
+  text-align: center;
+}
+
+a.button, input.button, .button a, .button input {
+  font-family: "ff-din-round-web-pro",sans-serif;
+  font-weight: bold;
+}
+a.button, input.button {
+  border: none;
+  background-color: #CCC;
+  //@include rc(15px);
+  height: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 0px 40px;
+  margin: 0 5px 0 0;
+}
+
+.button-follow a {
+  width: 115px;
+}
+
+.button {
+  a, input {
+    display: inline-block;
+    // float: left;
+    border: none;
+    margin-right: 5px;
+    padding: 8px 15px 4px;
+    @include bs(1px 1px 0, 0.05, $color:#fff);
+    text-shadow: 1px 1px 0 rgba(#000, 0.01);
+    $h: 24;
+    //height: $h + px;
+    // NOTE if you would like to lighten up css. Comment out @include rc
+    @include rc($button-corner-radius);
+    line-height: 11px;
+    $background-color: #ececec; 
+    background-color: $background-color;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    border: 2px solid darken($border-color, 1%);
+    &:hover {
+      border-color: darken($border-color, 10%);
+      color: $black;
+    }
+  }
+}
+
+.button-cancel {
+  a, input {
+    background-color: rgba($black, 0.02);
+    color: rgba($black, 0.2);
+  }
+}
+
+.button, .button input, .button a {
+  font-family: "ff-din-round-web-pro";
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  box-align: center;
+}
+
+// *************************
+// BUTTONS
+
+
+.button {
+  a {
+    text-transform: uppercase;
+    &:hover {
+    }
+    &:active {
+
+    }
+  }
+}
+
+.slot {
+  .block-foot {
+    text-align: center;
+    margin-bottom: 90px;
+    padding: 20px 0;
+  }
+  .button-more {
+    background-color: $black;
+    float: none;
+    color: #FFF;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 80px;
+  }
+}
+
+.button-submit, .button-add, .button-primary {
+  input, a, span {
+    background-color: $red;
+    color: #FFF;
+    border-color: $red;
+    border-width: 2px;
+    font-weight: bold;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -webkit-transition: border 0.04s ease-in-out;
+    &:hover, &:active {
+      background-color: $red;
+      color: #FFF;
+      border-color: darken($red, 2%);
+    }
+
+  }
+}
+
+
+.pagination .next {
+  a {
+    border: 3px solid $red;
+    -webkit-transition: border 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.04s ease-in-out;
+    box-shadow: 0;
+    color: rgba(#FFF, 0.9) !important;
+    &:after {
+      content: "";
+      height: 5px;
+      width: 100px;
+      @include bs;
+      display: block;
+      position: absolute;
+      left: 50%;
+      margin-left: -53px;
+      bottom: -3px;
+    }
+  }
+  a:hover {
+    background-color: $red;
+    color: #FFF;
+    border-color: darken($red, 8%);
+    @include bs;
+    color: rgba(#FFF, 1) !important;
+  }
+}
+
+.button-facebook-connect {
+  a {
+    border: 2px solid #29447e;
+    background-color: #4d639b;
+    color: #FFF;
+    &:hover {
+      border: 2px solid #29447e;
+      background-color: #4d639b;
+      color: #FFF;
+    }
+  }
+}
+
+.button-google-connect, .button-yahoo-connect, .button-facebook-connect {
+
+  svg {
+    fill: #FFF;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    &:hover {
+      fill: #FFF;
+    }
+  }
+  a {
+    padding-left: 30px;
+  }
+
+}
+
+.button-google-connect {
+  a {
+    border: 2px solid #9b1418;
+    background-color: #b32c28;
+    color: #FFF;
+    &:hover {
+      border: 2px solid #9b1418;
+      background-color: #b32c28;
+      color: #FFF;
+    }
+  }
+}
+
+.button-yahoo-connect {
+  a {
+    border: 2px solid #530074;
+    background-color: #640088;
+    color: #FFF;
+    &:hover {
+      border: 2px solid #530074;
+      background-color: #640088;
+      color: #FFF;
+    }
+  }
+}

@@ -1,0 +1,228 @@
+// *********************
+// FILE:        LAYOUT
+// AUTHOR:      BEN YACO
+// NOTES:       Core layout
+// *********************
+
+$container_width: 1140;
+$column_width: 95;
+$column_padding: 20;
+
+// *********************
+// BASE LAYOUT CONFIG
+
+$c:   1140;
+$n:   190;
+$ng:  40;
+$s:   300;
+$mg:  40;
+
+
+@mixin cspan ($span, $w: $column_width, $p: $column_padding) {
+  width: $span * $column_width + px !important;
+}
+
+@mixin column-span ($span, $w: $column_width, $p: $column_padding, $cw: $c) {
+  width: $span * $column_width;
+}
+
+@mixin columns($n: $n, $ng: $ng, $mg: $mg, $s: $s) {
+  $nms: $c - $n - $s - $ng - $mg;
+  $ms:  $c - $s - $mg;
+  $nm:  $c - $n - $ng;
+  .container {
+    width: $c + px;
+  }
+  .layout-nms {
+    .column-navigation {
+      width: $n + px;
+      margin-right: $ng + px;
+    }
+    .column-main {
+      width: $nms + px;
+      margin-right: $mg + px;
+    }
+    .column-supplement {
+      width: $s + px;
+      margin: 0;
+    }
+  }
+
+  .layout-nm {
+    .column-navigation {
+      width: $n + px;
+      margin-right: $ng + px;
+    }
+
+    .column-main {
+      width: $nm + px;
+      margin-right: 0;
+    }
+  }
+
+  .layout-ms {
+    .column-main {
+      width: $ms + px;
+      margin-right: $mg + px;
+    }
+    .column-supplement {
+      width: $s + px;
+      margin: 0;
+    }
+  }
+}
+
+.columns {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.column, .columns, video, div.video {
+  //-webkit-transition: width 0.5s ease-out;
+}
+
+body {
+  -webkit-transition: left 0.1s ease-out;
+}
+
+.column {
+  float: left;
+  position: relative;
+  @include bmb;
+}
+
+.container {
+  //width: $c + px;
+  text-align: left;
+  margin: auto !important;
+}
+
+.column-main {
+  width: 100%;
+}
+
+.layout-m, .layout-nm, .layout-ms, .layout-nms {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.layout-nm {
+  .column-navigation {
+    width: 190px;
+    float: left;
+  }
+}
+
+.layout-m {
+  .column-main {
+    width: 100%;
+  }
+}
+
+.column-navigation {
+  min-height: 100px;
+}
+
+//@include columns;
+
+
+#page-navigation {
+  -webkit-transition: left 0.25s ease-out;
+  left: 0;
+}
+
+@media all and (min-width: 650px) {
+  $c: 980;
+  @include columns;
+  .container {
+    width: $c + px;
+    text-align: left;
+    margin: auto !important;
+  }
+
+
+  #page-straps #page-navigation {
+    left: -300px;
+  }
+
+.page#page-show, #page-index {
+  float: left;
+  width: 100%;
+  @include bmb;
+  &:after {
+    content: "";
+    height: 100%;
+    display: block;
+    left: 0;
+    width: 20px;
+    top: 0;
+    position: fixed;
+    // background: url(runner.gif) repeat-y left top;
+  }
+
+}
+
+}
+
+
+@media all and (min-width: 1150px) {
+  #page-straps #page-navigation {
+    left: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 640px) {
+  #ign-logo {
+    margin-left: 10px !important;
+  }
+
+  #user-nav {
+    display: none;
+  }
+  #content-main {
+    .block {
+      padding: 10px;
+      .block {
+        padding: 0;
+      }
+    }
+  }
+
+  .topic-post-head {
+    padding: 10px;
+  }
+  // #content-main .list {
+  //   width: 100% !important;
+  //   .image {
+  //     width: 100% !important;
+  //     height: auto;
+  //     img {
+  //       width: 100%;
+  //     }
+  //   }
+  //   .body {
+  //     margin-left: 0 !important;
+  //   }
+  // }
+}
+
+#ui-back {
+  display: none;
+}
+
+
+
+
+
+
+

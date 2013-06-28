@@ -1,0 +1,224 @@
+// .navigation
+//    .path.top
+//    .sub-navigation
+//      .navigation
+
+$background-color: #1a1c20;
+$border-color: #000000;
+$sub: "sub-navigation";
+
+.navigation.theme-dark {
+  a {
+    color: #FFF;
+  }
+
+}
+
+.sub-navigation ul {
+  &:before {
+    content: "";
+    display: block;
+    border-color: transparent transparent $background-color transparent;
+    border-style: solid;
+    border-width: 10px;
+    height:0;
+    width:0;
+    position: absolute;
+    right: 10px;
+    top: -18px;
+    z-index: 12312;
+  }
+}
+
+.navigation {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0; 
+
+
+  li {
+    float: left;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    &:hover .sub-navigation {
+      display: block;
+    }
+  }
+  a {
+    display: block;
+    line-height: inherit;
+  }
+  .sub-navigation {
+    display: none;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.navigation {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  li {
+    float: left;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    a {
+       display: block;
+       line-height: 22px;
+       padding: 10px;
+
+    }
+    &:hover .#{$sub}{
+      display: block;
+      position: absolute;
+      left: 0;
+      opacity: 1;
+      display: block;
+    }
+    &:hover .#{$sub} ul {
+      display: block;
+      opacity: 1;
+    }
+  }
+  .#{$sub}{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    -webkit-transition: all 0.2s;
+    -webkit-transition-delay: 0.08s;
+    width: 230px;
+    ul {
+      @include rc(0 0 4px 4px);
+      @include box-shadow(0px 0px 8px rgba(0,0,0,0.2));
+      background-color: $background-color;
+      float: left;
+      width: 100%;
+      padding: 0 0 8px 0;
+      margin: 0;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      float: left;
+      width: 100%;
+      cursor: pointer;
+      text-indent: 8px;
+      vertical-align: middle;
+      border-top: none;
+      li:first-child a.link_to, li:last-child a.link_to {
+       @include rc(4px 4px 0 0);
+      }
+      li{
+        width: 100%;
+        //border-bottom: 1px solid $border-color;
+        margin: 0 !important;
+        padding: 0 !important;
+        a.link_to, span.selected, a {
+
+          border-top: 1px solid #26282b;
+          border-bottom: 1px solid $border-color;
+
+          display: block;
+          margin: 0;
+          vertical-align: middle;
+          &:hover {
+            text-decoration: none;
+            background-color: #000;
+            color: #fff !important;
+            }
+          }
+        }
+        li:first-child a {
+          border-top: none;
+        }
+    }
+  }
+  ul > li:last-child {
+    border: none;
+  }
+}
+
+
+
+@mixin nav($name, $drop_width:200, $bg_color: #F0F0F0, $p: 'br', $drop_offsetY:0, $drop_offsetX:0, $link_color: $link_standard, $button_height: 16px, $arrow:true, $hover_bg:#373737, $hover_tc: #FFF){
+  .navigation_#{$name}{
+    li{
+      a.link_to {
+       color: $link_color;
+       line-height: $button_height;
+       height: $button_height;
+      }
+    }
+    .anchor {
+      border-color: transparent transparent $bg_color;
+    }
+    .#{$sub}{
+      width: $drop_width + px;
+      @if $p == 'br' {
+        right: 0;
+        top: $drop_offsetY + px;
+      }
+
+      @if $p == 'bl' {
+        top: 20px;
+        left: 0;
+      }
+
+      @if $p == 'tl' {
+        bottom: 20px;
+        left: 0;
+      }
+      @if $p == 'tr' {
+        bottom: 20px;
+        right: 0;
+      }
+      z-index: 2;
+      ul {
+        background-color: $bg_color;
+        li{
+//         width: $drop_width;
+         a.link_to, span.selected {
+           &:hover {
+            background-color: $hover_bg;
+            color: $hover_tc;
+           }
+          }
+        }
+      }
+    }
+  }
+}
+
+#user-nav {
+  .sub-navigation {
+    left: auto;
+    right: 0;
+  }
+}
+
+#page-navigation {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #FFF;
+  padding: 20px;
+  ul, li {
+    float: left;
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
+}

@@ -1,0 +1,127 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//.users
+  //.user-name
+  //.user-details
+  //.user-location
+  //.users-member-since
+  //.user-position
+  //.user-level
+
+//.user-path
+//.user-follow
+//.user-following
+//.user-followers
+//.user-game
+//.user-social
+//  .user-twitter
+//
+//#user-activity
+//#user-blog
+//#user-games
+//#user-people
+
+// $user-path-text-transform: 
+
+#user-image {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 120px;
+  img {
+    width: 120px;
+  }
+}
+
+#user-name {
+  position: absolute;
+  left: 130px;
+  top: -60px;
+  color: #FFF;
+  font-size: 28px;
+  width: 500px;
+  text-shadow: 1px 1px 0 rgba(#000, 0.01);
+}
+
+#topic-posts-wide {
+  .topic-post-head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    * {
+      color: #FFF;
+      z-index: 1231232;
+    }
+  }
+  .post-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+}
+
+
+
+#page-users #post-image-cover {
+  img {
+    opacity: 0.9;
+  }
+}
+#page-users #user-cover {
+  img {
+    opacity: 1;
+  }
+}
+
+#user-avatar {
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 100px;
+  img {
+    width: 100%;
+    border: 4px solid #FFF;
+    @include bs;
+  }
+}
+
+.users {
+  .button {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+}
+
+
+@import "core/helpers";
+
+.user-path {
+  img.user-image {
+    @include rc(50%);
+  }
+}
+
+
+
+.user-path {
+  color: inherit;
+  // font-size: 80%;
+  // text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// user comments 
+// 
+

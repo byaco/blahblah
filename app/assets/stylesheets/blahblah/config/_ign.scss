@@ -1,0 +1,46 @@
+$theme:                'standard';
+
+// *****************************
+// COLORS
+
+$black:                 #161515;
+$black1:                #1e1d1d;
+$black2:                #1F1D1D;
+$black3:                #272626;
+$gray:                  #e0e0e0;
+$gray1:                 #e0e0e0;
+$gray2:                 #e0e0e0;
+$gray3:                 #e0e0e0;
+$red:                   #D3222A;
+$red1:                  #D3222A;
+$red2:                  #D3222A;
+$red3:                  #D3222A;
+
+// END COLORS
+// *****************************
+
+$border-color:          $gray1;
+$border-bottom:         $border-color;
+
+// *****************************
+// TYPE
+
+$header-font-color:     $black1;
+$h1-font-size:          46;
+$h1-line-height:        1em;
+$body-font-size:        16;
+$body-color:            $black2;
+
+$title-color:           #000;
+$link_font_weight:      bold;
+$link_color:            $red;
+$tag_font_weight:       $link_font_weight;
+$meta_font_size:        11px;
+$list-title-font-size:  16;
+$title_color:           #000;
+
+
+
+$block-baseline: 10;
+$module-head-baseline: 5;
+$object-baseline: 5;

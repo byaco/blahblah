@@ -1,0 +1,86 @@
+$vote-icon-size: 16;
+
+
+.voted {
+  position: relative;
+}
+
+.comments {
+  .comment {
+    padding-right: 50px;
+  }
+}
+
+.vote-path {
+  text-decoration: none;
+  .icon {
+    font-family: "ff-din-round-web-pro";
+  }
+
+  .icon-label {
+    display: none;
+  }
+}
+
+.ui-voting {
+  line-height: 19px;
+  vertical-align: middle;
+  .vote-total {
+    min-width: 15px;
+    line-height: 19px;
+    text-align: right;
+    color: #6e707d;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    bottom: 1px;
+  }
+
+ 
+  .vote-path, .vote-up, .vote-down {
+    // background: transparent url(icons/icon_vote_up_sprite.png) no-repeat 0 0;
+    display: inline-block;
+    float: none;
+    width: $vote-icon-size + px;
+    height: $vote-icon-size + px;
+    line-height: $vote-icon-size + px;
+    // background-size: $vote-icon-size + px;
+    // text-indent: -3333px;
+  }
+  .vote-down {
+    // background-image: url(icons/icon_vote_down.png);
+  }
+}  
+
+// .vote-down {
+//   background: transparent url(icons/icons_down.png) no-repeat 0 0;
+//   top: -10px;
+// }
+
+
+.ui-voting {
+  svg {
+    fill: #9a9a9b;
+    width: 22px;
+    height: 22px;
+    &:hover {
+      fill: $black;
+      scale: 1.2;
+    }
+  }
+
+  .voted svg {
+    fill: $red;
+  }
+}
+
+div.comment-voting {
+  top: -3px;
+}
+
+
+.post-creator {
+  .creator-details {
+    margin-top: 5px;
+  }
+}

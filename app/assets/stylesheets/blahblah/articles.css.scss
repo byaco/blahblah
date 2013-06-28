@@ -1,0 +1,116 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "core/colors";
+@import "core/helpers";
+@import "articles/review";
+@import "articles/video";
+@import "articles/comments";
+@import "articles/next_previous_article";
+
+
+
+// THEME panel
+
+.page-head {
+  height: 300px;
+}
+
+.cover {
+  height: 250px;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    width: 600px;
+  }
+}
+
+#ad-banner {
+  display: none;
+}
+
+
+.widgetContainer {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.column-navigation {
+    display: none;
+  }
+
+  .page-head .ad-720x90 {
+    float: none;
+    margin-top: 100px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    color: #0e0e0e;
+    font-size: 36px;
+    word-wrap: break-word;
+  }
+  .column-main {
+    background-color: #FFF;
+    position: relative;
+    // top: -96px;
+    top: -218px;
+    padding: 20px 40px;
+    @include bs(0 0 20px, 0.02);
+    // width: 640px !important;
+  }
+
+.alignright {
+  float: right;
+  margin-left: 20px;
+}
+
+h4 {
+  span {
+    color: #000 !important;
+  }
+}
+
+#article-content {
+  span, a {
+    color: #000 !important;
+    
+  }
+  img {
+    max-width: 100%;
+  }
+  p {
+    text-align: left !important;
+  }
+}
+
+
+
+#page-articles {
+  .article-image {
+    margin-bottom: 30px;
+  }
+}
+
+// ************************
+// IGN MARKUP
+
+.wp-caption {
+  width: 100% !important;
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
+@media all and (max-width: 640px) {
+  #article-content, #article-head {
+    padding: 20px;
+  }
+  .column-supplement {
+    display: none;
+  }
+}

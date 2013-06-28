@@ -1,0 +1,49 @@
+// DEPENDENCIES
+// JS hooks for popup
+// Facebook, Twitter, Reddit, More
+
+$share-button-default-color: $grey2;
+$icon-grid: 27;
+
+
+.ui-social-share {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+  .label {
+    display: none;
+  }
+}
+
+.share-facebook a:hover {
+  background-color: #43529d !important; 
+}
+.share-twitter a:hover {
+  background-color: #6094cb !important;
+}
+.share-reddit a:hover {
+  background-color: #c6dbf7;
+}
+
+span.social-share a {
+  //TODO update to be backwarads compatible when icons are finalized and sprited
+  // background-size: 67px;
+  background-position: 5px 0px;
+  height: $icon-grid + px;
+  width: $icon-grid + px;
+  line-height: $icon-grid + px;
+  display: block;
+  // text-indent: -3333px;
+  float: left;
+  background-color: $share-button-default-color;
+  svg {
+    vertical-align: middle;
+    line-height: 20 + px;
+  }
+  &:hover {
+    svg {
+      fill: #FFF;
+    }
+  }
+}
+

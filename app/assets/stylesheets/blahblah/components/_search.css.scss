@@ -1,0 +1,25 @@
+#ign-search {
+  float: right;
+  label {
+    height: 20px;
+    width: 20px;
+    display: block;
+    float: right;
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    background: transparent url(icons/icon_search.png) no-repeat center center;
+    background-size: cover;
+    text-indent: -3333px;
+  }
+  input.text {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  form {
+    padding: 0;
+    margin: 0;
+  }
+
+}

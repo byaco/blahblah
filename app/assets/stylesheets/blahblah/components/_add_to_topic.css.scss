@@ -1,0 +1,658 @@
+$user-image-size: 40;
+//.test-filter #page-show {
+  //FIXME I do not recommend this. Just playing
+ // -webkit-filter: blur(2px);
+//}
+
+
+#post-image-actions {
+  position: absolute;
+  right: 0;
+  // bottom: 0;
+  z-index: 11231;
+  width: 200px;
+  height: 20px;
+  bottom: 40px;
+  line-height: 20px;
+  // background-color: #000;
+  text-align: center;
+  a {
+    font-family: "ff-din-round-web-pro";
+    display: block;
+    color: #FFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(#000, 0.1);
+  }
+  // a {
+  //   float: right;
+  //   display: block;
+  //   width: 20px;
+  //   height: 20px;
+  //   background-color: #000;
+  //   background-color: #FFF;
+  //   margin-left: 2px;
+  // }
+}
+
+.no-image-found {
+  opacity: 0;
+}
+
+
+
+#post-new-text, #new-topic-post-url-pop {
+  $stroke-width: 1;
+  .icon-close {
+    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+   width='20px' height='20px' fill='#CCC' viewBox='0 0 20 20' enable-background='new 0 0 20 20' xml:space='preserve'>
+<line fill='none' stroke='#FFF' stroke-width='#{$stroke-width}' stroke-miterlimit='10' x1='2' y1='18' x2='18' y2='2'/>
+  <line fill='none' stroke='#FFF' stroke-width='#{$stroke-width}' stroke-miterlimit='10' x1='18' y1='18' x2='2' y2='2'/>
+</svg>") no-repeat center center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    opacity: 0.1;
+    @include rotate(0);
+    -webkit-transition: rotate 0.5s ease-out;
+    &:hover {
+      opacity: 0.5;
+      // @include rotate(10);
+    }
+  }
+}
+
+
+#nav {
+  #next, #prev {
+    height: 30px;
+    width: 30px;
+    background: red;
+  }
+}
+
+#wrapper {
+  width: 100%;
+  height: 300px !important;
+  background: blue;
+}
+
+#post-new-text, #new-topic-post-url-pop {
+  .block-body {
+    padding: 0 20px;
+    float: left;
+    width: 100%;
+  }
+  .block-head {
+    padding: 10px 20px;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+.post-source {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: 15px;
+  p {
+    font-size: 14px;
+  }
+}
+
+
+
+#source-images {
+  img.source-image {
+    width: 200px;
+    // width: auto;
+  }
+}
+
+.slidder {
+  li {
+    text-align: center;
+  }
+  li img {
+    max-width: 100%;
+    height: 300px;
+    display: inline-block;
+  }
+}
+
+// UI carousel
+#source-images-loaded {
+  // height: 300px;
+  height: 100%;
+  position: relative;
+  // float: left;
+  max-width: 1100px;
+  text-align: left;
+  margin: auto;
+  li {
+    position: relative;
+    cursor: pointer;
+  }
+
+  li:hover {
+    .button {
+      display: block;
+      display: none;
+    }
+  }
+
+  .button {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    line-height: 30px;
+    width: 120px;
+    margin-left: -60px;
+    cursor: pointer;
+    span {
+      display: block;
+      padding: 10px 10px;
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 13px;
+    }
+
+  }
+  .remote-image-width-label {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px 5px;
+    @include rc(2px);
+    background-color: rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 0 #1d1d1e;
+
+  }
+  .previous, .next {
+    height: 100%;
+    background-color: $black;
+    width: 50px;
+    color: #FFF;
+  }
+
+  .previous {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .next {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
+  li {
+    float: left;
+    list-style: none;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    background-color: $black;
+    overflow: hidden;
+    line-height: 300px;
+    vertical-align: middle;
+    margin: 20px;
+    text-align: center;
+    img {
+      line-height: 300px;
+      display: inline-block;
+    }
+
+  }
+  // .site-images {
+  //   position: absolute;
+  //   left: 0;
+  //   top:0;
+  //   width: 100000px;
+  // }
+
+}
+
+
+
+#page-show .post-creator {
+    color: inherit;
+    font-family: "ff-din-round-web-pro",sans-serif;
+  }
+
+#page-show .post-creator {
+  float: left;
+  width: 100%;
+  .user-image {
+    float: left;
+    width: 30px;
+  }
+}
+
+
+.modal {
+  .modal-container {
+    -moz-transition: top 2s ease-in-out;
+    -webkit-transition: top 0.15s ease-in-out;
+    transition: top 0.15s ease-in-out;
+
+  }
+  .button-submit, .button-add {
+    float: right;
+    margin-right: 0;
+    input {
+      margin-right: 0;
+    }
+  }
+  
+  .post-creator {
+    color: inherit;
+    font-family: "ff-din-round-web-pro",sans-serif;
+  }
+
+
+  .post-creator {
+  float: left;
+  width: 100%;
+  $image-width: 42;
+  $image-height: $image-width;
+  .user-image {
+    float: left;
+    width: $image-width + px;
+  }
+  .image {
+      // NOTES: Set height to not see flicker while image loads
+      width: $image-width + px;
+      height: $image-height + px;
+      float: left;
+    }
+}
+
+  div.user-image {
+    float: left;
+    margin-right: 10px;
+  }
+  div.user-image {
+    img {
+      width: $user-image-size + px;
+      margin-right: 15px;
+    }
+  }
+  .post-creator {
+    margin-bottom: 0px;
+    margin-top: 6px;
+
+    .body {
+      margin-left: $user-image-size + 10 + px;
+    }
+  }
+  // .creator-details {
+  //   margin-left: $user-image-size + px; 
+  //   padding: 0;
+  // }
+  .post-meta {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1em;
+    font-weight: normal;
+  }
+  input.string, textarea {
+    width: 100%;
+  }
+}
+
+.loading {
+  
+}
+
+
+
+
+
+#wrapper {
+  width:100%;
+  min-width:320px;
+  height:100%;
+}
+
+#nav {
+  z-index:100;
+  top:8px;
+  width:200px;
+  height:20px;
+  left:50%;
+  background:rgba(0,0,0,0.75);
+  padding:0;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+
+#remote-image-picker {
+  position: relative;
+  float: left;
+  width: 100%;
+  #next {
+    position: absolute; 
+    right: 0;
+    top: 0;
+
+  }
+
+  #previous {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+#nav li {
+  display:block;
+  float:left;
+  width:14px;
+  height:14px; line-height:14px;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+  -ms-border-radius:7px;
+  -o-border-radius:7px;
+  border-radius:7px;
+  background:rgba(255,255,255,0.1);
+  overflow:hidden;
+  padding:0;
+  margin:3px 11px 0 0;
+  text-align:center;
+}
+
+#nav li#prev {
+  margin-left:5px;
+  background:transparent;
+}
+
+#nav li#next {
+  margin-right:0;
+  background:transparent;
+}
+
+#nav li.selected {
+  background:rgba(255,255,255,0.4);
+}
+
+
+// black
+$border-color: #000;
+
+.drop-image {
+  background-color: #000;
+  line-height: 220px;
+  text-align: center;
+  border: 1px solid $border-color;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#blob, .drop-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 225px;
+  line-height: 225px;
+  // TODO set to variable for height
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+}
+
+
+#post-new-text, #new-topic-post-url-pop, .theme-dark {
+
+  .block-title {
+    color: #FFF;
+    text-transform: none;
+    font-size: 18px;
+  }
+  .modal-body {
+    background-color: $black2;
+    color: #FFF;
+  }
+
+  label {
+    display: none;
+  }
+
+  .block-head, .block-foot {
+    position: relative;
+  }
+
+  .block-head {
+    border-bottom: 1px solid rgba(#000, 0.3);
+    background-color: darken(#1e1d1d, 1%);
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      border-bottom: 1px solid #FFF;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      opacity: 0.05;
+    }
+    .block-title {
+      font-size: 17px; 
+      color: #FFF;
+      padding: 0;
+      margin: 0;
+      clear: none;
+
+    }
+  }
+
+
+  .block-foot, .form-actions {
+    padding-top: 20px;
+    border-top: 1px solid rgba(#000, 0.3);
+    padding-bottom: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      border-bottom: 1px solid #FFF;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      opacity: 0.05;
+    }
+  }
+
+
+
+  .button-cancel {
+    float: right;
+    margin-right: 10px;
+    a {
+
+      background-color: #1f1f1f !important;
+      border-color: #2e2e2e !important;
+      @include bs;
+      color: #FFF;
+      border-width: 2px;
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  input.string {
+    padding: 20px 15px;
+  }
+
+
+  input.string, textarea {
+    background-color: #111111;
+    border: 1px solid #000;
+    color: #FFF;
+    border-left: 3px solid #000;
+  }
+
+  .post-creator-name {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #9a9a9b;
+  }
+}
+
+#post-image-input.image-added, #new-topic-post-url-pop .drop-image {
+  // position: absolute;
+  // right: 0;
+  // top: 0;
+  float: right;
+  width: 200px !important;
+  height: 227px !important;
+  .post_image {
+    opacity: 0;
+  }
+}
+
+div.string, div.text {
+  border-bottom: 1px solid rgba(255,255,255, 0.05);
+}
+
+.button-cancel {
+  background-color: #1f1f1f !important;
+  border-color: #2e2e2e !important;
+  @include bs;
+  color: #FFF;
+  border-width: 2px;
+  opacity: 0.4;
+}
+
+.not-valid {
+  .button-submit input, .button-cancel a {
+    background-color: #1f1f1f !important;
+    border-color: #2e2e2e !important;
+    @include bs;
+    color: #FFF;
+    border-width: 2px;
+    opacity: 0.4;
+  }
+}
+#new-post-topic-post, #new-topic-post-url-pop  {
+  .form-body {
+    width: 340px;
+    float: left;
+  }
+}
+
+
+
+form {
+  position: relative;
+}
+#topic_post_message {
+  height: 120px;
+}
+
+#post-image-input {
+  background-color: #000;
+  position: relative;
+  $h: 40;
+  height: $h + px;
+  margin-bottom: 20px;
+  @include rc(4px 0 0 4px);
+  #post_image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: $h + px;
+    opacity: 0;
+  }
+  .hint {
+    float: left;
+    line-height: $h + px;
+    padding: 0;
+    margin: 0;
+    color: #9c9c9c;
+  }
+  .post_image {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: $h + px;
+  }
+  #post_image {
+    cursor: pointer;
+  }
+  .post_image label {
+    // display: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    cursor: pointer;
+    line-height:  $h + px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "ff-din-round-web-pro";
+    display: block;
+    cursor: pointer;
+    height: 100%;
+    width: 130px;
+    height: 100%;
+    @include rc(4px 0 0 4px);
+    background-color: $red;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
+#new_post .image-added {
+  label {
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #post_image {
+    height: 100%;
+    width: 100%;
+    z-index: 12312;
+  }
+  .post_image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#ui-file-handle {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 123;
+}

@@ -1,0 +1,22 @@
+#page-crumbs {
+  width: 960px;
+  text-align: left;
+  position: relative;
+  margin: auto;
+  top: 60px;
+  .navigation {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  li {
+    a {
+      text-transform: uppercase;
+      color: #000;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #FFF;
+    }
+  }
+}

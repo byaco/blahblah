@@ -1,0 +1,376 @@
+$list-gutter: 20;
+
+@mixin box-align-center {
+
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-box;
+  display:-o-box;
+  display:box;
+  -webkit-box-orient:vertical;
+  -moz-box-orient:vertical;
+  -ms-box-orient:vertical;
+  -o-box-orient:vertical;
+  box-orient:vertical;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+  -ms-box-pack:center;
+  -o-box-pack:center;
+  box-pack:center;
+  -webkit-box-align:center;
+  -mox-box-align:center;
+  -ms-box-align:center;
+  -o-box-align:center;
+  box-align:center;
+}
+
+@mixin list($type, $w:auto, $gutter:$list-gutter, $title_fs:inherit, $img:fix) {
+  .#{$type} {
+    @if $img != auto {
+      .image img {
+        width: $w + px;
+//        height: $w + px;
+      }
+      .image, .path {
+        width: $w + px;
+        // height: $w + px;
+        max-width: auto;
+      }
+    }
+    @else {
+      .image img {
+        width: auto;
+      }
+      .image {
+        width: $w + px;
+        .user-image {
+          width: $w + px;
+          // height: $w + px;
+          display: block;
+        }
+      }
+    }
+    @if $title_fs != inherit {
+     .list-title {
+       font-size: $title_fs;
+     }
+    }
+
+    .body {
+      margin-left: $w + $gutter + px;
+//      min-width: 250px;
+    }
+
+  }
+  table.#{$type} {
+    td.list_image {
+      width: $w + $list_gutter + px;
+      //padding-right: 0;
+      margin: 0;
+    }
+    .list_image img{
+      width: $w + px;
+    }
+    .list_body {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+}
+
+
+@mixin center-it {
+  text-align: left !important;
+  margin: auto;
+  margin-left: auto !important;
+  float: none !important;
+  clear: both;
+}
+
+@mixin hide-text {
+  text-indent: -3333em;
+  text-align: left;
+  display: block;
+  line-height: 300px;
+  overflow: hidden;
+  a {
+    display: block;
+  }
+}
+
+
+@mixin opacity($value, $ie_value:50){
+  opacity: $value;                      // Standard: FF gt 1.5, Opera, Safari
+  filter: alpha(opacity=$ie_value);        // IE lt 8
+  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ie_value})';
+  -khtml-opacity: $value;               // Safari 1.x
+  -moz-opacity: $value;                 // FF lt 1.5, Netscape
+}
+
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform: rotate(#{$deg}deg);
+  -o-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
+@mixin treatment {
+  background-color: #FFF;
+  padding: 10px;
+  @include bmb;
+  @include bs(0px 1px 2px, 0.14);
+  @include rc(0px);
+  margin-bottom: 12px;
+  position: relative;
+  border-bottom: 1px solid #CBCBC8;
+  float: left;
+}
+
+@mixin highlight($hc, $tc:#000) {
+  ::selection {
+    background-color: $hc;
+    color: $tc;
+  }
+  ::-moz-selection {
+    background-color: $hc;
+    color: $tc;
+  }
+  ::-webkit-selection {
+    background-color: $hc;
+    color: $tc;
+  }
+}
+
+
+@mixin gd2($c1:#000, $lighten:10%, $direction:'vertical') {
+  background: $c1; /* old browsers */
+  $c2: lighten($c1, $lighten);
+  background: transparent;
+  @if $direction == 'vertical' {
+    background: -moz-linear-gradient(center top, $c2, $c1) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$c2), color-stop(100%,$c1)); /* webkit */
+    background: -o-linear-gradient(top, $c2, $c1);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$c2}', endColorstr='#{$c1}',GradientType=0 ); /* ie */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$c2}', endColorstr='#{$c1}',GradientType=0 ); /* ie */
+
+  }
+  @else {
+    background: -moz-linear-gradient(left, $c2 0%, $c1 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$c2), color-stop(100%,$c1)); /* webkit */
+    background: -o-linear-gradient(top, $c2, $c1);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$c2}', endColorstr='#{$c1}',GradientType=0 ); /* ie */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$c2}', endColorstr='#{$c1}',GradientType=0 ); /* ie */
+  }
+  $border: darken($c1, 0%);
+  //border: 1px solid $border;
+  $tt: complement($c1);
+  color: $tt;
+}
+
+@mixin baseline($span) {
+  margin-bottom: $span * 3 + px;
+}
+
+@mixin space($span) {
+  margin-right: $span * 3 + px;
+}
+
+
+@mixin arrow {
+  border-color: #131518 transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+}
+
+
+@mixin clearfix_old {
+  .body:after {
+          visibility: hidden;
+          display: block;
+          content: "";
+          clear: both;
+          height: 0;
+          }
+  * html .body { zoom: 1; } /* IE6 */
+  *:first-child+html .body { zoom: 1; } /* IE7 */
+}
+
+
+@mixin bgcover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+@mixin absolute-center ($w) {
+  width: $w + px;
+  position: absolute;
+  left: 50%;
+  margin-left: $w / 2 * -1 + px;
+}
+
+@mixin bmb {
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+@mixin border-radius ($rc: $corner_radius){
+  -moz-border-radius: $rc;
+  -webkit-border-radius: $rc;
+  -khtml-border-radius: $rc;
+  border-radius: $rc; //IE9+
+}
+
+@mixin rc ($rc: $corner_radius){
+  -moz-border-radius: $rc;
+  -webkit-border-radius: $rc;
+  -khtml-border-radius: $rc;
+  border-radius: $rc; //IE9+
+}
+
+@mixin border-radius ($rc: $corner_radius){
+  -moz-border-radius: $rc;
+  -webkit-border-radius: $rc;
+  -khtml-border-radius: $rc;
+  border-radius: $rc; //IE9+
+}
+
+@mixin box-sizing ($box) {
+  box-sizing: $box;
+  -webkit-box-sizing: $box;
+  -moz-box-sizing: $box;
+}
+
+@mixin box-shadow ($bs) {
+  -webkit-box-shadow: $bs;
+  -moz-box-shadow: $bs;
+  box-shadow: $bs;
+}
+
+@mixin box-flex ($bf: 1) {
+  display: block;
+  -webkit-box-flex: $bs;
+  -moz-box-flex: $bs;
+  box-flex: $bs;
+}
+
+@mixin bs ($offset:nil, $opacity:0.1, $color:#000, $inset: false) {
+  @if $offset == nil {
+    @include box-shadow (0px 1px 5px rgba($color, $opacity));
+  }
+  @else {
+    @if $inset == true {
+      -webkit-box-shadow: inset $offset rgba($color, $opacity);
+      -moz-box-shadow: inset $offset rgba($color, $opacity);
+      box-shadow: inset $offset rgba($color, $opacity);
+    }
+    @else {
+      -webkit-box-shadow: $offset rgba($color, $opacity);
+      -moz-box-shadow: $offset rgba($color, $opacity);
+      box-shadow: $offset rgba($color, $opacity);
+    }
+  }
+}
+
+
+@mixin checkbox($name, $position:left, $w:auto){
+  #{$name}{
+    position: relative;
+    label {
+      @if $w != auto {
+        width: $w + px;
+      }
+      padding: 0;
+      input.checkbox {
+        top: 0;
+      }
+    }
+    @if $position == left {
+      input {
+        //float: left;
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: 2px;
+      }
+      label {
+        padding-left: 22px;
+      }
+    }
+    @if $position == 'right' {
+      input {
+        //float: right;
+        position: absolute;
+        right: 0;
+        left: auto
+      }
+      label {
+        padding-right: 22px;
+      }
+    }
+  }
+}
+
+
+@mixin radio($name, $position:left, $w:auto){
+  #radio_#{$name}{
+    position: relative;
+    label {
+      @if $w != auto {
+        width: $w + px;
+      }
+    }
+    @if $position == 'left' {
+      input.radio {
+        //float: left;
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+      label {
+        padding-left: 22px;
+      }
+    }
+    @if $position == 'right' {
+      input.radio {
+        //float: right;
+        position: absolute;
+        right: 0;
+        top: 2px;
+      }
+      label {
+        padding-right: 22px;
+      }
+    }
+  }
+}
+
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset($pad: 0, $marg: 0) {
+  padding: $pad;
+  margin: $marg;
+}
+
+
+@mixin f($face, $s, $lh, $m, $p) {
+  font-family: $face;
+  line-height: $lh;
+  font-size: $s;
+  margin: $m;
+  padding: $p;
+}

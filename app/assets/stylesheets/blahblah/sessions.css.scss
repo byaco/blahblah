@@ -1,0 +1,239 @@
+@import "core/helpers"; // Mixins of crossbrowser properties
+@import "core/colors"; // Mixins of crossbrowser properties
+
+.hint {
+  color: #c1c1c1;
+  font-size: 13px;
+  float: left;
+  width: 100%;
+
+}
+
+.ui-overflow-text .body-content {
+  height: 300px;
+  overflow: scroll;
+}
+
+.modal-body {
+  min-height: 200px !important;
+}
+@import "authorizations/nda";
+
+#bulk-invite {
+  textarea {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+
+#header {
+  position: relative;
+  #ign-logo {
+    margin-botttom: 50px;
+    height: 100px;
+    a {
+      width: 134px;
+      height: 55px;
+    }
+
+    svg {
+      fill: #FFF;
+      display: block;
+      float: left;
+      padding: 0;
+      // margin: 0 20px 0 0;
+      // background: transparent url(logo/ign_logo_sans_d.png) no-repeat top left;
+      // background: transparent url($svg_ign_logo) no-repeat 0 0;
+      // background-size: 100%;
+      // text-indent: -3333px;
+      overflow: hidden;
+      // height: 40px;
+      // line-height: 30px;
+      width: 134px;
+      height: 55px;
+
+    }
+  }
+}
+
+h1#beta-title {
+  margin-bottom: 15px;
+  color: #FFF;
+  text-transform: uppercase;
+  color: rgba(#FFF, 0.99);
+  font-size: 30px;
+  border-left: 6px solid rgba(#FFF, 0.8);
+  padding-left: 15px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  text-shadow: rgba(0,0,0,0.2) 0 0 1px;
+}
+
+.page-description {
+  font-weight: bold;
+  font-size: 22px;
+  color: rgba(#FFF, 0.8);
+}
+
+p, h2, h3, h4, h5, h6, label {
+  color: #FFF;
+}
+
+.boolean {
+  display: inline;
+  float: none;
+  width: auto !important;
+  input {
+    margin-right: 10px;
+    display: inline;
+    float: none;
+  }
+}
+#terms-of-service {
+  p {
+    margin-bottom: 20px;
+    margin-left: 22px;
+  }
+}
+#new-topic-post-url-pop {
+  .modal-container {
+    top: 20px !important;
+    margin-top: 0 !important;
+  }
+  .modal {
+    background-color: rgba(#000, 0.9);
+  }
+}
+
+label {
+
+  abbr {
+    display: none;
+  }
+}
+
+
+#sign-up-nda {
+  height: 300px;
+  overflow-y: scroll;
+  overflow: scroll;
+  background-color: #000;
+}
+
+.button-add  {
+  width: 100%;
+  a, input {
+  font-size: 18px;
+  line-height: 20px;
+  padding: 15px 0px;
+  // width: 300px;
+  width: 100%;
+  margin-right: 0;
+  }
+}
+
+.button a, .button input {
+  background-color: $button-action-background-color;
+  color: #FFF;
+  border-color: $button-action-border-color;
+  &:hover {
+    color: #FFF;
+    border-color: $button-action-background-color;
+  }
+}
+
+body {
+  background-color: #000;
+}
+
+
+
+#temp {
+  background: #000000 url(devise/cover_2.jpg) no-repeat 110px 0;
+  background-size: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  // -webkit-filter: blur(1px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+@media all and (max-width: 640px) {
+  #header {
+    display: block !important;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  h1#beta-title {
+    font-size: 26px;
+    line-height: 1.1em;
+  }
+
+  .page-description {
+    font-size: 14px;
+  }
+
+  .column-main {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .page {
+    position: relative;
+    z-index: 2;
+  }
+
+  #temp {
+    z-index: 0;
+    background-size: 850px;
+    background-position: -220px -100px;
+    opacity: 0.5;
+  }
+
+  .columns {
+    @include bmb;
+  }
+
+
+  input.string, input.email, input.password {
+    width: 100%;
+  }
+
+
+
+  .button-submit, .button-submit input {
+    width: 100%;
+  }
+
+}
+
+@media all and (min-width: 640px) {
+
+  #temp {
+    min-width: 900px;
+  }
+  .column-main {
+    @include bmb;
+    background-color: transparent;
+    color: #FFF;
+    margin-top: 80px;
+    padding-left: 30px;
+    width: 350px !important;
+  }
+}
+

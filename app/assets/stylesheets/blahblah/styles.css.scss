@@ -1,0 +1,464 @@
+// *************************************************************
+// FILE:                ARCHETYPE
+// AUTHOR:              BEN YACO
+// NOTES:               This is your base inheritance, and config. DONT TOUCH UNLESSS YOU KNOW WHAT YOU ARE DOING
+
+
+// ***************************
+// CONFIGS GO HERE
+$image-width: 50;
+@import "config/ign";
+
+// ***************************
+// IMPORT CORE STYLESHEETS
+
+@import "core/reset";
+@import "core/helpers"; // Mixins of crossbrowser properties
+
+// ***************************
+// BASE TYPE
+@import "core/type";
+@import "core/forms";
+@import "core/tables";
+
+// ***************************
+// BASE LAYOUT
+@import "core/layout";
+@import "core/lists";
+@import "core/buttons";
+@import "core/messages"; // User messages on success, warning, and error
+@import "core/header";
+@import "core/footer";
+@import "core/navigation";
+@import "core/pagination";
+@import "core/crumbs";
+@import "core/modules";
+@import "core/icons";
+@import "core/comments";
+
+// ***************************
+// BASE COMPONENTS
+@import "core/ads";
+@import "core/autocomplete";
+@import "core/calendar";
+@import "core/drawer";
+@import "core/filters";
+@import "core/modal";
+@import "core/popup";
+@import "core/social";
+@import "core/tip";
+@import "core/video";
+
+// ***************************
+// PUT APPLICATION SPECIFIC STYLES HERE
+// INCLUDE PAGES/Application Level CSS as needed
+// SHARED
+
+@import "shared/follow";
+@import "shared/user_card";
+@import "shared/stream";
+
+// ***************************
+// INCLUDE MODULES
+
+// @import "modules/somegreatmodule"
+
+// ***************************
+// PAGE TYPE OVERRIDES
+// NOTES: Put base overrides by page type here
+@import "pages/new";
+@import "pages/edit";
+@import "pages/index";
+@import "pages/show";
+@import "pages/landing";
+@import "pages/search";
+
+@import "components/feed";
+@import "components/filter";
+@import "components/gallery";
+@import "components/tabs";
+@import "components/social_share";
+@import "components/voting";
+@import "core/page_head";
+
+@import "users";
+
+.user-path {
+  display: inline-block;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+.block-title {
+  color: #6e707d;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.created-at {
+  font-family: "ff-din-round-web-pro";
+}
+.label {
+  font-family: "ff-din-round-web-pro";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+// END
+// ***************************
+
+
+// ***************************
+// BASE LIST STYLES BY CLASS
+
+
+
+
+
+
+
+
+div, ul, li, span, form, input {
+  @include bmb;
+}
+
+
+@import "topic_posts";
+
+body {
+  background-color: #f6f7f8;
+}
+
+
+
+
+
+.show-details {
+  .image {
+    float: left;
+    img {
+      width: 50px;
+    }
+  }
+  .body {
+    margin-left: 60px;
+  }
+
+  h2, h3, h4 {
+    clear: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.post-creator {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+  $image-width: 30;
+  .creator-image {
+    float: left;
+    width: $image-width + px;
+  }
+  .creator-details {
+    // margin-left: $image-width + 10 + px;
+    font-size: 95%;
+  }
+}
+
+#post-body {
+  blockquote {
+    border-left: 8px solid $black;
+    padding: 0px 20px;
+    margin: 25px;
+    p {
+      font-size: 18px;
+      font-style: italic
+    }
+  }
+  img {
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .wp-caption {
+    // text-align: center;
+    p {
+      padding: 10px 0 0 0;
+      font-family: "ff-din-round-web-pro";
+    }
+  }
+
+  #IGNPlayerContainer {
+    display: none !important;
+  }
+  .wp-caption {
+    width: 100% !important;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+}
+
+h1.post-title {
+  font-size: 28px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.meta {
+  color: $grey1;
+  font-size: 14px;
+  a {
+    color: inherit;
+  }
+}
+
+
+
+.page-title {
+  font-size: 22px;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.user-image {
+  float: left;
+}
+
+
+.column-navigation {
+  .navigation {
+    li {
+      border-bottom: 1px solid #CCC;
+      @include bs(0 0 0, 0.2);
+    }
+
+    a {
+      color: $black;
+      display: block;
+      padding: 10px 0;
+
+    }
+  }
+}
+
+
+
+#navigation-fixed {
+	position: fixed;
+	left: 0;
+	height: 100%;
+	width: 300px;
+	top: 0;
+	background-color: white;
+	@include bs;
+  padding: 10px;
+  z-index: 10000;
+  .body {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.user-path {
+  font-weight: bold;
+}
+
+.meta {
+  .user-path {
+    font-size: 16px;
+  }
+  .label {
+    font-size: 12px;
+    color: #9a9a9b;
+  }
+}
+
+
+
+
+
+
+img.user-image {
+  width: 50px;
+  //@include rc(50%);
+}
+
+
+
+
+
+.page {
+  min-height: 100%;
+}
+
+.page .page {
+  overflow: auto;
+  padding-bottom: 220px;
+}
+
+html,body {
+  height: 100%;
+}
+
+
+
+
+.cover, .hero {
+  background-color: $black;
+  min-height: 350px;
+  margin-top: 0px;
+
+}
+
+
+.body-image {
+  float: left;
+  width: 90px;
+}
+
+.body-body {
+  margin-left: 100px;
+}
+
+
+.image-loading {
+  
+}
+
+$image-thumb: 90;
+@include list("comments", 37, $gutter: 30);
+@include list("activity", 37, $gutter: 30);
+@include list("topic-posts", 380, $gutter: 15);
+// @include list("list", 150, $img: auto);
+
+@include list("users", 50);
+// ***************************
+// OVERRIDE BY COLUMN
+
+@include list("articles", 150);
+@include list("videos", 150);
+@include list("games", 150);
+#page-about {
+  @include list("articles", 250);
+}
+.column-main {
+  // @include list("users", $image-thumb);
+  @include list("comments", 40);
+}
+
+.column-supplement {
+  @include list("videos", 120, $gutter: 15);
+}
+
+
+// ***************************
+// OVERRIDE BY PAGE
+
+#page-search {
+  @include list("users", 120);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.image-loading {
+  background-color: $black;
+  min-height: 90px;
+  // line-height: 90px;
+  text-align: center;
+  position: relative;
+  svg {
+    // @include rotate(0);
+    fill: #FFF;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    vertical-align: center;
+    -webkit-animation: rotate 0.84s linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+}
+
+.image {
+  position: relative;
+  svg {
+    fill: #FFF;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#post-image.image-loading {
+  min-height: 450px;
+}
+
+// ***************************
+// SCRATCH OVERRIDES
+
+@import "core/scratch";
+
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+video {
+  width: 100%;
+}
+
+@import "themes/yaco";

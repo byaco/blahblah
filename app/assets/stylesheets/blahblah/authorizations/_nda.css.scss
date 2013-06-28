@@ -1,0 +1,59 @@
+#new-topic-post-url-pop {
+
+  .modal-body .body-content {
+    padding: 40px;
+  }
+
+  .modal {
+    background-color: rgba(#000, 0.8);
+  }
+
+  h1 {
+    color: #FFF;
+    font-size: 22px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .ui-overflow-text {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 120px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.40) 0%,rgba(0,0,0,0) 100%);
+      z-index: 0;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 120px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.40) 0%,rgba(0,0,0,0) 100%);
+      z-index: 0;
+    }
+  }
+  .body-content {
+    height: 600px;
+    overflow: scroll;
+    position: relative;
+  }
+  ol {
+    list-style: roman;
+    font-size: 16px;
+    line-height: 1.2em;
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}
+

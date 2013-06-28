@@ -1,0 +1,80 @@
+.drop-image {
+  min-height: 300px;
+  // border: 1px dashed rgba($black, 0.2);
+  float: left;
+  width: 100%;
+  // @include rc(4px);
+  @include bmb;
+  background: #000 url(icons/icon_image_white.png) no-repeat center center;
+  padding: 0px;
+  text-align: center;
+  canvas {
+    width: 100%;
+  }
+  input {
+
+  }
+  #post-image {
+    padding: 0;
+    margin: 0 !important;
+  }
+}
+#post_image {
+  line-height: 300px;
+  width: 100%;
+  height: 300px;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+#post-image-input {
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.load-image {
+  min-height: 600px;
+  display: block;
+  width: 100%;
+}
+.drop-image {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-box;
+  display:-o-box;
+  display:box;
+  -webkit-box-orient:vertical;
+  -moz-box-orient:vertical;
+  -ms-box-orient:vertical;
+  -o-box-orient:vertical;
+  box-orient:vertical;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+  -ms-box-pack:center;
+  -o-box-pack:center;
+  box-pack:center;
+  -webkit-box-align:center;
+  -mox-box-align:center;
+  -ms-box-align:center;
+  -o-box-align:center;
+  box-align:center;
+}
+#add-image {
+  padding: 0;
+  margin: 0;
+  .form-actions {
+    @include bmb;
+  }
+  div.post_image {
+    padding: 0;
+    margin: 0;
+    .optional {
+      display: none;
+    }
+  }
+}

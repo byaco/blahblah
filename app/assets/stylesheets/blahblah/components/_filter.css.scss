@@ -1,0 +1,85 @@
+// *************************************************************
+// AUTHOR:              BEN YACO
+// ***************************
+// CONFIGS GO HERE
+
+
+// TODO breakout into a helper
+
+
+$text-color-on-dark: #FFF;
+$text-color-on-light: $black;
+$sort-background-color-hover: transparent;
+$sort-background-color: #3c3c3c;
+$sort-selected-background-color: transparent;
+$sort-text-color-on-hover: $text-color-on-light;
+$sort-font-family: "ff-din-round-web-pro";
+
+$ui-sort-baseline: 3;
+
+.ui-sorts {
+  border-bottom: 1px solid #959595;
+}
+.ui-sorts {
+  li a {
+    margin-bottom: -1px;
+    font-family: $sort-font-family;
+  }
+}
+
+.ui-tabbed {
+  .tab {
+    display: none !important;
+  }
+  .selected {
+    display: block !important;
+  }
+}
+
+
+.ui-sorts li {
+  a {
+    border-bottom: 4px solid transparent;
+  }
+}
+
+
+.ui-sorts, .ui-sorts {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 30px 0;
+  li {
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  li.selected {
+    a {
+      background-color: $sort-selected-background-color;
+      border-color: $sort-text-color-on-hover;
+      color: $sort-text-color-on-hover;
+      &:hover {
+        color: $sort-text-color-on-hover;
+        border-color: $sort-text-color-on-hover;
+      }
+    }
+  }
+
+  a {
+    // color: $link-secondary;
+    color: #6e707d;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 10px;
+    &:hover {
+      background-color: $sort-background-color-hover;
+      color: $sort-text-color-on-hover;
+      border-color: $sort-text-color-on-hover;
+    }
+  }
+}

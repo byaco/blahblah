@@ -1,0 +1,67 @@
+//$warning:
+$red: #d3222a;
+$background-color: $red;
+$button-action-background-color: $red;
+$button-action-border-color: darken($button-action-background-color, 0%);
+
+@mixin button ($name, $background-color: $button-background-color, $border-color: $button-border-color, $border-weight: 2, $round-corner-radius: $button-round-corner-radius) {
+  .#{$name} {
+    background-color: $background-color;
+    border-color: $border-color;
+  }
+
+}
+
+
+//$blue: ;
+
+//$warning_color: ;
+//$error_color: ;
+
+
+// $black:   #121212;
+$black: #201F1F;
+$black1:  #1e1d1d;
+$black2:  #1e1d1d;
+$black3:  rgba(#1e1d1d, 0.5);
+
+// $grey:  lighten($black, 80%);
+// $grey1:  lighten($black, 50%);
+// $grey2:  lighten($black, 95%);
+$grey: lighten($black, 50%);
+$grey1: lighten($black, 50%);
+$grey2: lighten($black, 80%);
+$border-color: lighten($grey, 30%);
+
+$link-secondary: $black3;
+
+//$warning-color
+//$error-color
+
+
+
+// ON BLACK
+//$heading-color: $black1;
+
+
+// NAVIGATION
+
+// BUTTONS
+$button-corner-radius: 2px;
+$button-height: 30;
+$button-padding-left-right: 20;
+// $button-stroke
+
+
+// OBJECTS
+// $object-title-font-size
+// $object-title-line-height
+// $object-title-margin-bottom
+// $object-description-font-size
+
+// TABS
+
+
+// MODULES
+
+

@@ -1,0 +1,112 @@
+$list-row-height: 380;
+
+.ui-full-screen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  z-index: 120;
+  padding-top: 100px;
+  
+
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+
+  ul {
+    width: 9999999px;
+    li {
+      float: left;
+      width: 400px;
+      background-color: black;
+    }
+
+  }
+}
+
+.gallery {
+  li {
+    width: 33%;
+    height: $list-row-height + px;
+    .title {
+     float: left;
+     width: 100%;
+    }
+    .image {
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      a {
+        display: block;
+        float: left;
+        height: 180px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.gallery-2-up {
+  li {
+    width: 50%;
+    max-width: 500px;
+    .image, .image a {
+      height: 250px;
+    }
+  }
+}
+
+.ui-gallery {
+  .ui-image-selected {
+    position: relative;
+    height: 411px;
+    width: 100%;
+    float: left;
+
+    img {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+    }
+  }
+}
+
+.gallery-images {
+
+  .image {
+    border: 5px solid #1b1b1b;
+  }
+  .selected {
+    border: 5px solid #000;
+  }
+}
+
+.ui-slide {
+  width: 100%;
+  .slide-wrapper {
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .slide-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10000px;
+      div {
+        float: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.video-widget-container {
+  margin-bottom: 24px !important;
+  float: left;
+  width: 100%;
+  object {
+    width: 100% !important;
+  }
+}
+
+.video-embed {
+  // TODO YACO not in love with this method
+  width: 100%;
+  height: 0px;
+  padding-bottom: 50%;
+  position: relative;
+  margin-bottom: 30px;
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

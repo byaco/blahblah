@@ -1,0 +1,391 @@
+// #feed li#topic-post-0 {
+//   width: 620px !important;
+//   height: 300 + 10 + 300 + px;
+//   .image {
+//     height: 220px;
+//     width: 100%;
+//     img {
+//       width: 620px;
+//     }
+//   }
+// }
+// #page-topics #feed {
+//   #topic-post-5 {
+//     width: 620px !important;
+//     height: 450px !important;
+//     .post-meta {
+//       display: none;
+//     }
+//     .post-image {
+//       overflow: hidden;
+//       height: 300px;
+//     }
+//     img {
+//       width: 620px !important;
+//     }
+//   }
+// }
+
+
+
+
+
+@media all and (min-width: 324px) {
+  #topic-post-pop {
+
+    .modal-container {
+      width: 980px !important;
+      margin-left: -490px !important;
+    }
+  }
+
+}
+.vote-total, .comment-count {
+  font-family: "ff-din-round-web-pro";
+  margin-right: 5px;
+  font-size: 14px;
+  color: #6e707d;
+}
+
+#feed {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  // YACO fix naming convetion
+  .icon-comment {
+    display: inline-block;
+    bottom: -4px;
+    position: relative;
+  }
+ 
+  .topic-post-comments-count {
+    margin-right: 10px;
+  }
+  .vote-path, .icon-comment {
+    text-align: left;
+  }
+  .topic-post-comments-count {
+    img {
+      width: 22px;
+    }
+  }
+  span.post-type-url, span.post-type-text {
+    display: none;
+  }
+
+  li.post-type-text {
+    .post-title {
+      border-top: 1px solid #CCC;
+      border-bottom: 1px solid #CCC;
+      padding: 20px 0;
+      position: relative;
+      &:before {
+        content: "'";
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        height: 20px;
+        width: 20px;
+        background: transparent url(icons/icon_ql.png) no-repeat 0 0;
+        text-indent: -3333px;
+        overflow: hidden;
+      }
+      &:after{
+        content: "'";
+        display: block;
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        height: 20px;
+        width: 20px;
+        background: transparent url(icons/icon_ql.png) no-repeat 0 0;
+        text-indent: -3333px;
+        overflow: hidden;
+        @include rotate(180);
+      }
+    }
+    .topic-post-head {
+      height: 220px;
+      @include box-align-center;
+      background-color: #e5e5e5;
+      width: 300px;
+      float: left;
+      margin: 10px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+
+    }
+  }
+  span.post-type-image {
+    $h: 60;
+    width: $h + px;
+    height: $h + px;
+    background: transparent url(icons/icon_image_medium.png) no-repeat center center;
+    background-size: 40px;
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    text-indent: -3333px;
+    background-color: rgba(0,0,0, 0.2);
+    @include rc(50%);
+
+
+
+  }
+  span.post-type-video {
+      display: block;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      width: 60px;
+      height: 60px;
+      background: transparent url(video/video_play.png) no-repeat center center;
+      background-size: 60px;
+      text-indent: -33333px;
+  }
+  .topic-post-creator {
+    float: right;
+  }
+
+  .topic-post-message {
+    margin-right: 60px;
+  }
+  .post-title {
+    font-size: 16px;
+    line-height: 1.2em;
+    clear: both;
+  }
+  .post-image {
+    .post-path {
+      display: block;
+      float: left;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+body#page-topics {
+  background-color: #e2e2e5;
+}
+
+#feed li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  .post-actions {
+    text-align: right;
+    padding-right: 10px;
+    .comment-count {
+      // float: left;
+      float: right;
+
+    }
+  }
+  .image {
+    padding: 10px;
+    margin: 0;
+    // height: 169px;
+    height: 170px;
+    overflow: hidden;
+  }
+  .user-image {
+    margin-right: 0px;
+    width: 37px;
+  }
+  .body {
+    @include bmb;
+    padding: 0 10px 10px 10px;
+  }
+}
+
+#feed li.topic-posts-editors-pick {
+  .image {
+    height: auto;
+  }
+
+}
+
+
+.topic-posts-trending {
+  .post-image {
+    float: right;
+  }
+}
+
+#feed li:nth-child(3n+3) {  
+  margin-right: 0;
+}
+
+#feed {
+  .ui-voting {
+    float: right;
+  }
+  .topic-post-head {
+    padding: 0 10px;
+    float: left;
+    height: 80px;
+  }
+  .meta {
+    margin-bottom: 0;
+  }
+  .post .post-image {
+    float: left;
+    width: 100%;
+    text-align: center;
+    // background-color: $black;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    img {
+      display: inline-block;
+    }
+
+  }
+
+  .post-details {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  li {
+    width: 320px;
+    margin-right: 10px;
+    height: 390px;
+    overflow: hidden;
+  }
+
+  h2 {
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.3em;
+  }
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+#feed li.masonry-brick {
+  display: block;
+  opacity: 1;
+  width: 300px;
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  @include bmb;
+  @include bs;
+  padding: 10px;
+  img {
+    width: auto;
+    max-width: 100%
+  }
+}
+
+@media all and (max-width: 640px) {
+  
+  #feed li {
+    display: block;
+    opacity: 1;
+    width: 100% !important;
+  }
+}
+
+
+
+
+.topic-posts-trending {
+  .ui-voting {
+    line-height: 22px;
+    height: 22px;
+    width: 70px;
+    span {
+      display: block;
+      float: left;
+    }
+    .vote-total, .voted, .vote-path {
+      line-height: 22px;
+      height: 22px;
+      display: inline-block;
+    }
+    .vote-up {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@media all and (min-width: 650px) {
+  #topic-posts-trending, #topic-posts-latest {
+    .block-title {
+      float: left;
+    }
+    .post-actions {
+      position: absolute;
+      left: 75px;
+      top: 10px;
+      width: 100px;
+      .ui-voting {
+        float: right;
+      }
+    }
+
+    .topic-post-creator {
+      float: left;
+    }
+
+
+    .post-image {
+      float: left;
+      // margin-right: 20px;
+    }
+
+
+    .body {
+      margin-left: 0px;
+      width: 400px;
+      float: left;
+      margin-right: 60px;
+    }
+
+    .post {
+      padding: 0;
+      padding-left: 260px;
+    }
+  }
+}
+
+#topic-posts-latest {
+  .pagination {
+    display: none;
+  }
+}
+// #topic-posts-latest {
+//   li {
+//     border: none;
+//   }
+//   .body {
+//     float: none;
+//     margin-left: 70px;
+//     width: auto;
+//     margin-right: 0;
+//   }
+// }
+
+

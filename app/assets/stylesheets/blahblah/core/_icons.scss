@@ -1,0 +1,161 @@
+////**************************
+////  AUTHOR : BEN YACO
+////  ICONS SMALL, MEDIUM, LARGE
+////  small: 21x21
+////  medium: 21x21
+////  large: 21x21
+//
+.icon {
+  width: 21px;
+  height: 21px;
+  text-indent: -33333px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+$icon-fill-color:           #9a9a9b;
+$icon-fill-color-hover:     $black;
+$icon-fill-color-selected:  $red;
+
+svg {
+  fill: $icon-fill-color;
+  &:hover {
+    fill: $icon-fill-color-hover;
+  }
+}
+
+.icon-comment, .icon-like {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+//
+//.icon-facebook {
+//
+//}
+//
+//
+////************************
+//// ICONS NAVIGATE
+//
+////.icon-next
+////.icon-previous
+////.icon-refresh
+////.icon-shuffle
+//
+//
+////************************
+//// ICONS OPERATE
+//
+////.icon-close
+////.icon-open
+//
+//
+////************************
+//// ICONS CRUD
+//
+////.icon-edit
+////.icon-add
+////.icon-delete
+//
+//
+////************************
+//// ICONS OBJECTS
+//
+////.icon-users
+////.icon-people
+//
+//
+////.icon-soundoff
+////.icon-soundon
+////.icon-checkbox
+////.icon-print
+////.icon-check
+////.icon-links
+////.icon-video
+////.icon-sound
+////.icon-settings
+////.icon-messages
+////.icon-attachment
+////.icon-help
+////.icon-block
+////.icon-share
+////.icon-time
+////.icon-lock
+////.icon-favorite
+////.icon-rate
+////.icon-creditcrard
+////.icon-stop
+////.icon-play
+////.icon-movie
+////.icon-pictures
+////.icon-games
+////.icon-font
+////.icon-flag
+////.icon-folder
+////.icon-fullscreen
+////.icon-documents
+////.icon-repeat
+////.icon-tags
+////.icon-tag
+////.icon-thumbnails
+////.icon-list
+////.icon-profile
+////.icon-message-open
+////.icon-save
+////.icon-inbox
+////.icon-reply
+////.icon-trash
+////.icon-info
+////.icon-link
+////.icon-arrow
+////.icon-back
+////.icon-chat
+////.icon-chat-active
+////.icon-download
+////.icon-install
+////.icon-email
+////.icon-document
+////.icon-privacy
+////.icon-url
+////.icon-calendar
+//
+//
+//
+//
+////********************
+//// ICONS SOCIAL
+////
+//
+//.icon-facebook
+//.icon-twitter
+//.icon-pinterest
+//.icon-gmail
+//.icon-yahoo
+//.icon-googleplus
+//
+//
+////********************
+//// ICONS ESRB
+////
+//
+//.icon-esrb-teen
+//.icon-esrb-m
+.icon-repost {
+  background: transparent url(icons/repost.svg);
+}
+
+
+.repost-path {
+  background: transparent url(icons/repost.svg);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  display: block;
+  float: left;
+  overflow: hidden;
+  text-indent: -3333px;
+}

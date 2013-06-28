@@ -1,0 +1,71 @@
+#topic-head, #ad-banner {
+  background-color: #131518;
+}
+
+// #ad-banner {
+//   position: absolute;
+//   left: 0; 
+//   top: 0;
+// }
+
+
+@media all and (min-width: 321px) {
+  @import "topics/page_head_desktop";
+}
+
+
+button:focus, a:focus { 
+    outline: none; 
+}
+
+#topic-posts-new-actions {
+  .post-actions {
+    margin-top: 4px;
+    li {
+      line-height: 24px;
+      height: 24px;
+      a {
+        line-height: 24px;
+        display: inline-block;
+      }
+    } 
+  }
+  svg {
+    fill: #FFF;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+    position: relative;
+    // &:hover {
+    //   fill: $red;
+    // }
+  }
+}
+@media all and (max-width: 322px) {
+  #topic-posts-new-actions {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1231231;
+    background-color: $black;
+    .post-actions {
+      li {
+        float: left;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.topic-actions {
+  float: left;
+}
+

@@ -1,0 +1,103 @@
+//**********************************
+// AUTHOR:          BEN YACO
+//
+
+
+//*******************
+// AD STANDARD
+
+@import "core/helpers";
+@import "core/colors";
+
+.ad {
+  position: relative;
+  background-color: $black;
+  float: none;
+  width: 100%;
+  @include baseline($block-baseline);
+  text-align: center;
+  &:after {
+    content: "Advertisement";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+  }
+
+}
+
+
+#ad-banner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  @include bs(0 0 20px, 0.2);
+}
+
+
+.ad-300x250 {
+  // background: transparent url(mocks/ads/medrec.jpg) no-repeat top left;
+  background-color: $black !important;
+  height: 250px;
+  width: 300px;
+  text-align: center;
+  line-height: 250px;
+  color: rgba(#FFF, 0.5);
+}
+
+//*******************
+// AD MED REC
+
+.ad300x250, .ad-300x250 {
+  width: 300px;
+  height: 250px;
+  //background: transparent url(mocks/ads/medrec.jpg) no-repeat top left;
+  background-size: cover;
+}
+
+.ad-720x90 {
+	width: 720px;
+	height: 90px;
+	background-color: #000;
+	text-align: left;
+	margin: auto;
+  //background: #000 url(mocks/ads/950x90.png) no-repeat top left;
+  background-size: cover;
+  line-height: 90px;
+}
+
+.ad-980x70 {
+  width: 980px;
+  height: 70px;
+  background-color: #000;
+  text-align: left;
+  margin: auto;
+  line-height: 70px;
+  //background: #000 url(mocks/ads/950x90.png) no-repeat top left;
+  background-size: cover;
+}
+.page-head {
+	.ad-720x90 {
+		float: none;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}
+
+.ad-breakout {
+  background: transparent url(/assets/mocks/ads/960x250.png) no-repeat center center;  
+  height: 600px; 
+  width: 940px !important; 
+  background-size: 100%;
+  padding: 30px 0;
+}
+
+
+
+
+//*******************
+// AD POPUP
+
+
+
+

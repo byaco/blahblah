@@ -1,0 +1,77 @@
+// VIDEO PAGINATION
+@import "core/helpers";
+$page_width: 40;
+$page_height: $page_width;
+
+
+// .next.page {
+//   right: -21px;
+//   top: 5px;
+
+//   &:hover {
+//     right: -16px;
+//   }
+
+//   a {
+//     left: 0;
+//     right: -40px;
+//   }
+// }
+
+// .previous.page {
+//   left: -21px;
+//   top: 0px;
+//   -webkit-transition: left 0.2s ease-in-out;
+//   -webkit-transition: right 0.2s ease-in-out;
+
+//   &:hover {
+//     left: -16px;
+//   }
+// }
+
+
+
+.video_component .page {
+  width: 40px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  padding: 20px;
+  -webkit-transition: left 0.2s ease-in-out;
+  -webkit-transition: right 0.2s ease-in-out;
+  a {
+    @include rc(0 50% 50% 0);
+    @include bs(0 0 20px, 0.5);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-image: url(icons/icon_previous.png);
+    background-repeat: no-repeat;
+    background-position: 45px center;
+    display: block;
+    width: 80px !important;
+    height: 80px !important;
+    text-indent: -3333px;
+    position: relative;
+    left: -40px;
+    top: 10px;
+  }
+
+}
+
+.previous {
+  left: 0;
+  top: 0px;
+}
+
+
+// .next a {
+
+//   @include rc(50% 0 0 50%);
+//   background-image: url(icons/icon_next.png);
+//   background-position: 15px center;
+//   right: 0px;
+//   top: 0px;
+//   left: auto;
+//   right: -50px;
+// }
+

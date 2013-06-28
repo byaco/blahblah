@@ -1,0 +1,56 @@
+.page-flash {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 55px;
+  background-color: $black;
+  @include bs;
+  z-index: 100111;
+  .message-image {
+    float: left;
+    width: 40px;
+  }
+  .message {
+    padding: 20px 0;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    color: #FFF;
+  }
+  .message-body {
+    margin-left: 50px;
+
+  }
+  .container {
+    // TODO notes yaco you might be able to move this global. But don't feel great doing it now
+    position: relative;
+  }
+  .close-message {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    svg {
+      opacity: 0.2;
+      line {
+        stroke: #FFF;
+      }
+    }
+  }
+}
+
+#flash-failure {
+  background-color: $red;
+}
+
+
+
+.messages {
+  background-color: #e5e5e5;
+  border-top: 1px solid #CCC;
+  @include bmb;
+  padding: 20px;
+}

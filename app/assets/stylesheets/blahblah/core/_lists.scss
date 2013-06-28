@@ -1,0 +1,414 @@
+
+.objects {
+  float: left;
+  width: 100%;
+  li {
+    width: 100%;
+    @include baseline(3);
+    @include space(2);
+    float: left;
+    position: relative;
+    p {
+      font-size: 15px;
+      line-height: 1.4em;
+    }
+
+    .image {
+      float: left;
+    }
+
+
+    .object-title {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .object-description {
+      font-weight: normal;
+    }
+  }
+}
+
+.list-standard {
+  padding-left: 2em;
+  list-style-type: disc;
+}
+
+
+$list-title-font-size: 16;
+
+//*****************
+// OVERRIDES
+//*****************
+
+.list .title {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.video {
+  svg {
+    fill: #FFF;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.ui-list-standard {
+  li {
+    padding: 0 !important;
+  }
+  .creator {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+  }
+}
+
+.image {
+  a {
+    display: block;
+    left: left;
+  }
+}
+
+.topic-posts {
+}
+
+
+.list {
+  position: relative;
+  .object-meta {
+    font-family: "ff-din-round-web-pro";
+    font-size: 12px;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    color: #9a9a9b;
+    a {
+      color: $red;
+    }
+  }
+  h2, h3 {
+    clear: none;
+  }
+  p {
+    margin: 0;
+    padding: 0 0 5px 0;
+  }
+  li {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 39px;
+  }
+  .message {
+    font-size: 14px;
+  }
+  p, .description {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  .actions {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: "ff-din-round-web-pro";
+
+  }
+
+  .image {
+    float: left;
+    margin-bottom: 15px;
+  }
+  .meta {
+    .user-path {
+      // font-weight: normal;
+    }
+    img.user-image {
+      width: 30px;
+    }
+  }
+  .title, .list-title {
+    margin: 10px 0 0px 0;
+    font-size: $list-title-font-size + px;
+    line-height: 1.2em;
+  }
+  .title a {
+    font-family: "ars-maquette-web";
+    font-weight: bold;
+    color: inherit;
+    color: $black;
+  }
+}
+
+.list {
+  .user-image {
+    margin-right: 9px;
+  }
+  .title, .list-title {
+    font-weight: bold;
+  }
+}
+
+.videos {
+  .icon-video {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 60px;
+    max-width: 100%;
+    display: block;
+    height: 60px;
+    background: transparent url(icons/icon_video_play.png) no-repeat center center;
+    background-size: 60px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}
+
+.is-video, .icon-video {
+  cursor: pointer;
+}
+
+.is-video {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 60px;
+  max-width: 100%;
+  display: block;
+  height: 60px;
+  background: transparent url(icons/icon_video_play.png) no-repeat center center;
+  background-size: 60px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s ease-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.no-image {
+  .image {
+    display: none;
+  }
+  .body {
+    margin-left: 0 !important;
+  }
+}
+.ui-more {
+  background-color: $black;
+}
+
+
+.carousel-wrapper {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 12312;
+    background: linear-gradient(to left, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
+
+  }
+}
+
+#slot-video-carousel {
+  padding-top: 200px;
+  background: $black url(covers/cover_skyrim.jpg) no-repeat center top;
+  // background-attachment: fixed;
+}
+
+$carousel-gutter-right: 10;
+
+.slot-actions {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  a {
+    color: #FFF; 
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    background: transparent url(icons/icons_views.png) 0 0 no-repeat;
+    width: 15px;
+    height: 15px;
+    text-indent: -3333px;
+    float: left;
+  }
+
+  .path-more {
+    background: transparent url(icons/icons_views.png) right top no-repeat;
+
+  }
+}
+
+.posts {
+  .title {
+    font-size: 18px;
+    // font-size: 22px;
+  }
+}
+
+.ui-carousel {
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 300px;
+  
+  .list li {
+    width: 300px !important;
+    margin-right: 10px;
+    .image, .image a {
+      height: 150px;
+    }
+    // .title a {
+    //   height: 2.9em;
+    //   overflow: hidden;
+    //   display: block;
+    // }
+  }
+  .list {
+    width: 99999px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+// .gallery {
+//   float: left;
+//   position: relative;
+//   width: 100%;
+//   overflow: hidden;
+//   height: 100%;
+//   ul {
+//     width: 19000px;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     li {
+//       float: left;
+
+//     }
+//   }
+//   img {
+//     display: block;
+//   }
+// }
+
+
+.article-article-type {
+  font-family: "ff-din-round-web-pro";
+  display: block;
+  color: $black;
+}
+
+
+#page-search .list {
+  img {
+    width: 450px;
+  }
+  li {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .image {
+    float: left;
+  }
+  .image img {
+    width: $image-width + px;
+  }
+  .body {
+    margin-left: $image-width + 20 + px;
+    width: 300px;
+  }
+  .title {
+    clear: none;
+  }
+}
+
+
+table.list {
+  li {margin-bottom: 0; }
+}
+
+// .ui-list-cards {
+//   width: 100%;
+//   float: left;
+//   padding: 0;
+//   margin: 0;
+//   li {
+//     height: 400px;
+//     width: 300px;
+//     float: left;
+//     padding: 0;
+//     margin: 0;
+//     margin-right: 10px;
+//     background-color: #FFF;
+//     margin-bottom: 15px;
+//     // padding: 10px;
+//   }
+//   .image {
+//     width: 100%;
+//     padding: 10px;
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   .body {
+//     padding: 10px;
+//   }
+// }
+
+
+@mixin ui-list-cards($selector) {
+  #{$selector} {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    li {
+      height: 400px;
+      width: 300px;
+      float: left;
+      padding: 0;
+      margin: 0;
+      margin-right: 10px;
+      background-color: #FFF;
+      margin-bottom: 15px;
+      // padding: 10px;
+    }
+    .image {
+      width: 100%;
+      padding: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    .body {
+      padding: 10px;
+    }
+  }
+}
+
+@include ui-list-cards(".ui-list-cards");

@@ -1,0 +1,120 @@
+// AUTHOR : BEN YACO
+// 
+
+
+$form-elements-margin-bottom: 15;
+$label-font-size: 14;
+$label-font-weight: bold;
+// $label-line-height: 1.2em;
+
+// ERRORS
+$error-color: $red;
+
+select {
+  max-width: 200px;
+}
+
+
+::-webkit-input-placeholder {
+  font-weight: normal;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-weight: normal;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-weight: normal;
+}
+
+:-ms-input-placeholder {  
+  font-weight: normal;
+}
+
+
+form {
+  float: left;
+  width: 100%;
+}
+
+
+textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+form {
+  .error {
+    display: block;
+    color: $error-color;
+  }
+}
+
+.input.hidden {
+  display: none;
+}
+
+
+.boolean {
+  // float: left;
+  // width: 100%;
+  input {
+    float: left;
+  }
+}
+
+
+form {
+  .hint {
+    display: block;
+    font-size: 13px;
+    padding: 10px 0 10px 0;
+  }
+	label {
+		display: block;
+    font-size: $label-font-size + px;
+    font-weight: $label-font-weight;
+    line-height: 1.2em;
+    margin-bottom: 6px;
+	}
+
+  // TODO CLEANUP now has simpleform
+	input[type="text"], input.string, textarea, input[type="password"], input[type="email"] {
+		border: 1px solid #ccc;
+		padding: 10px 10px;
+    color: #000;
+	}
+  textarea {
+    height: 150px;
+    font-weight: normal;
+  }
+  .field {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+input, textarea {
+  color: #231f20;
+}
+
+input.string, input[type="text"]:focus, textarea {
+  //border-left: 4px solid #2182c5;
+  outline: none;
+}
+}
+.form-actions {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+textarea, input {
+  @include bmb;
+}
+
+div.input {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}

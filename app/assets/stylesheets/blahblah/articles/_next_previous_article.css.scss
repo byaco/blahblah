@@ -1,0 +1,24 @@
+#article-next-previous {
+  $border-color: darken(#f7f7f7, 10%);
+  a {
+    color: $black;
+    font-weight: bold;
+  }
+  ul {
+    float: left;
+    width: 100%;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+    li {
+      width: 50%;
+      float: left;
+      list-style-type: none;
+      padding: 0 10px;
+    }
+    li:last-child {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,222 @@
+@import "core/helpers";
+$tip_background_color:               #FFF;
+$ui-tip-padding:                     20;
+$ui-tip-head-padding:                20;
+$ui-tip-box-shadow-opacity:          0.1;
+
+.tool-top, .tip-tip {
+  .arrow {
+    $arrow_height: 8;
+    $arrow_width: 8;
+    $arrow_offset_top: $arrow_height * 2 * -1;
+
+    border-color: $tip_background_color transparent transparent transparent;
+    border-style: solid;
+    border-width: $arrow_width + px;
+    height:0;
+    width:0;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: $arrow_offset_top + px;
+    left: 15px;
+  }
+}
+
+
+.tool-tip {
+  position: absolute;
+  left: 0;
+  top: -90px;
+  z-index: 100;
+  .tip-frame {
+    background-color: $tip_background_color;
+    float: left;
+    width: 350px;
+    @include bmb;
+    @include bs(0px 3px 20px, $ui-tip-box-shadow-opacity);
+  }
+  .body {
+    padding: $ui-tip-padding + px;
+    font-size: 13px;
+    width: 100%;
+    float: left;
+  }
+
+  .head {
+    padding: $ui-tip-padding + px;
+    border-bottom: 1px solid $border-color;
+  }
+
+
+  .foot {
+    float: left;
+    width: 100%;
+    padding: $ui-tip-padding + px;
+    border-top: 1px solid $border-color;
+  }
+
+  .close {
+    position: absolute;
+    background-color: $tip_background_color;
+    padding: 3px;
+    right: 15px;
+    top: 15px;
+    // width: 13px;
+    // height: 13px;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    display: block;
+    z-index: 2;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+}
+
+
+@mixin arrow ($point: "down", $color: $black) {
+  @if $point == "up" {
+    border-color: transparent transparent $color transparent;
+  }
+
+  @else if $point == "right" {
+    border-color: transparent transparent transparent $color;
+  }
+
+  @else if $point == "down" {
+    border-color: $color transparent transparent transparent;
+  }
+
+  @else if $point == "left" {
+    border-color: transparent transparent transparent $color;
+  }
+  border-style: solid;
+  border-width: 15px;
+  height:0;
+  width:0;
+}
+
+$arrow-offset: 20;
+$arrow-offset-vertical: 15;
+
+.tool-tip.tr {
+  .arrow {
+    @include arrow("up", $tip_background_color);
+    top: ($arrow-offset-vertical) * -1 + px;
+    right: $arrow-offset + px;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+
+.tool-tip.bl {
+  .arrow {
+    @include arrow("down", $tip_background_color);
+    top: auto;
+    right: auto;
+    bottom: ($arrow-offset-vertical) * -1 + px;
+    left: $arrow-offset + px;
+  }
+}
+
+
+.tool-tip.br {
+  .arrow {
+    @include arrow("down", $tip_background_color);
+    top: auto;
+    right: $arrow-offset + px;
+    bottom: ($arrow-offset-vertical) * -1 + px;
+    left: auto;
+  }
+}
+
+.tip-tip.br {
+  .arrow {
+    @include arrow("down", #000);
+    top: auto;
+    right: $arrow-offset + px;
+    bottom: (20) * -1 + px;
+    left: auto;
+  }
+}
+.tool-tip {
+  img {
+    margin-bottom: 15px;
+  }
+  .tip-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 9px;
+  }
+}
+
+.tool-tip.tl, .tip-tip.tl {
+  .arrow {
+    top: ($arrow-offset-vertical) * -1 + px;
+    right: auto;
+    bottom: auto;
+    left: $arrow-offset + px;
+    border-color: transparent transparent $tip_background_color transparent;
+  }
+}
+
+.tip-tip.tr {
+  .arrow {
+    @include arrow("up", #000);
+    top: (20) * -1 + px;
+    right: 0 + px;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.tip-tip.bl {
+  .arrow {
+    @include arrow("down", #000);
+    top: auto;
+    right: auto;
+    bottom: (20) * -1 + px;
+    left: $arrow-offset + px;
+  }
+}
+.tip-tip.tl {
+  .arrow {
+    border-color: transparent transparent #000 transparent;
+  }
+}
+
+.tip-user {
+  img {
+    float: left;
+  }
+  .details {
+    margin-left: 60px;
+  }
+}
+
+.tip-tip {
+  .tip-frame {
+    position: relative;
+    background-color: #000;
+    color: #FFF;
+    padding: 10px 15px;
+    @include rc(3px);
+    display: inline-block;
+    .title {
+      font-size: 11px;
+      line-height: 1em;
+      padding: 0;
+      margin: 0;
+      vertical-align: middle;
+      font-weight: bold;
+      text-transform: uppercase;
+
+    }
+  }
+}

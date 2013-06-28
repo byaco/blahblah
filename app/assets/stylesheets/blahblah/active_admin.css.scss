@@ -1,0 +1,67 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "core/colors";
+@import "core/helpers";
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+#active_admin_content {
+  %form {
+    width: 350px;
+  }
+}
+
+.user-image {
+  width: 50px;
+}
+
+#site_title {
+  a {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+    background: transparent url(logo/ign_logo_sans_d.png) no-repeat top left;
+    text-indent: -3333px;
+    overflow: hidden;
+    height: 46px;
+    width: 106px;
+  }
+}
+
+table td:nth-of-type(1) {
+  width: 90px;
+}
+
+body.active_admin #header {
+  height: 60px;
+  // background: $black3;
+}
+
+#active_admin_content {
+}
+
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   body.active_admin {
+//      .status_tag { background: #6090DB; }
+//   }
+//
+// Notice that Active Admin CSS rules are nested within a
+// 'body.active_admin' selector to prevent conflicts with
+// other pages in the app. It is best to wrap your changes in a 
+// namespace so they are properly recognized. You have options
+// if you e.g. want different styles for different namespaces:
+//
+// .active_admin       applies to any Active Admin namespace
+// .admin_namespace    applies to the admin namespace (eg: /admin)
+// .other_namespace    applies to a custom namespace named other (eg: /other)
